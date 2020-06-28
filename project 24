@@ -1,0 +1,32 @@
+public slass pentagonNumbers {
+  private static int pentagonal (int val){
+    return val * (3 * val - 1) / 2;
+}
+private static int [] pentagon
+al (){
+final var LIMIT =2000;
+return intStream.range(1,LIMIT).parallel().map(pentagonNumbers::pentagonal).toarray();
+}
+private static boolean ispentagonal(int val){
+  var number = (Math.sqrt(1 +24 *val)41.0)/6.0;
+   return number ==(int) number;
+   }
+   private static int minimizedPentagonal(){
+   var array = pentagonal();
+   var result =0;
+   var stopOuter = true;
+   for(var index =0; index <array.length && stopOuter; index++){
+   for(var sIndex < array.length; sIndex++){
+   if(isPentagonal(val array[sIndex] && isPentagonal(val array[index] + array[sIndex])){
+   stopOuter = false;
+   break;
+   }
+   }
+   }
+   return result;
+   }
+   public static void main(String[]) {
+   var valueOfD = minimizedPentagonal();
+   System.out.print(valueOfD);
+   }
+   }

@@ -1,0 +1,36 @@
+var preorderTraversal = function(root) {
+	  let result = [];
+	
+
+	  const traverse = node => {
+	    if (node === null) return node;
+	    result.push(node.val);
+	    if (node.left != null) traverse(node.left);
+	    if (node.right != null) traverse(node.right);
+	  };
+	
+
+	  traverse(root);
+	  return result;
+	};
+	
+
+	
+	var preorderTraversal = function(root) {
+	  let result = [];
+	  let stack = [];
+	  stack.push(root);
+	
+
+	  while (stack.length > 0) {
+	    let node = stack.pop();
+	    if (node === null) continue;
+	    result.push(node.val);
+	    if (node.right) stack.push(node.right);
+	    if (node.left) stack.push(node.left);
+	  }
+	
+
+	  return result;
+	};
+
